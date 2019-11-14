@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 `;
 
 function App() {
-  const [airports, setAirports] = useState([]);
+  const [airports, setAirports] = useState([])
   const [loading, setLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
   useEffect(() => {
