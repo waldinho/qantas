@@ -7,13 +7,14 @@ import DetailContainer from '../containers/DetailContainer';
 import { getAirports } from '../api/getAirports';
 
 const Wrapper = styled.div`
-  .loader {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -25px;
-    margin-left: -25px;
-  }
+  color: #323232;
+    .loader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -25px;
+      margin-left: -25px;
+    }
 `;
 
 function AppContainer() {

@@ -15,3 +15,18 @@
 .App-link {
   color: #09d3ac;
 }
+
+button {
+  display: inline-block;
+  border-radius: .1875rem;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: .688rem 1.5rem;
+  color: #e40000;
+  border: 2px solid #e40000;
+  margin: 1rem 0 1.5rem 0;
+}

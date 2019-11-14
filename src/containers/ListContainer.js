@@ -21,7 +21,7 @@ const ListContainer = ({content}) => {
                                 international={item.internationalAirport}
                                 cityName={item.city.cityName}
                                 cityCode={item.city.cityCode}
-                                countryName={item.country.countryCode}
+                                countryName={item.country.countryName}
                                 countryCode={item.country.countryCode}
                                 location={item.location}
                                 region={item.region}
