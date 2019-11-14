@@ -40,7 +40,7 @@ function App() {
                 (<ListContainer {...props} content={airports}/>)
                 }/>
                 { airports.map((item, i)=>{
-                  return <Route key={i} path={`/${item.airportName}`} render={props => (<DetailContainer {...props} content={airports}/>)}/>
+                  return <Route key={i} path={`/${item.airportName}`} render={props => (<DetailContainer {...props} content={item}/>)}/>
                 })}
             </Switch>
         }

@@ -29,18 +29,7 @@ const ListContainer = ({content}) => {
                                 location={item.location}
                                 region={item.region}
                         />  :
-                            <DetailContainer 
-                                airportCode={item.airportCode}
-                                airportName={item.airportName}
-                                domestic={item.domesticAirport}
-                                international={item.internationalAirport}
-                                cityName={item.city.cityName}
-                                cityCode={item.city.cityCode}
-                                countryName={item.country.countryCode}
-                                countryCode={item.country.countryCode}
-                                location={item.location}
-                                region={item.region}
-                            />
+                            <DetailContainer />
                         }
                         </Wrapper>
                     );                

@@ -8,11 +8,22 @@ const Wrapper = styled.div`
 `;
 
 const DetailContainer = ({content}) => {
-    console.log('List:', content)
+    console.log('Detail:', content)
     return(
         <>
             <Wrapper>
-                <Detail />
+                <Detail 
+                    airportCode={content.airportCode}
+                    airportName={content.airportName}
+                    domestic={content.domesticAirport}
+                    international={content.internationalAirport}
+                    cityName={content.city.cityName}
+                    cityCode={content.city.cityCode}
+                    countryName={content.country.countryCode}
+                    countryCode={content.country.countryCode}
+                    location={content.location}
+                    region={content.region}
+                />
             </Wrapper>              
         </>
     );
