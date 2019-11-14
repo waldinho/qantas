@@ -1,13 +1,19 @@
 import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
-
+import Loader from 'react-loader-spinner'
 import ListContainer from '../containers/ListContainer';
 import DetailContainer from '../containers/DetailContainer';
 import { getAirports } from '../api/getAirports';
 
 const Wrapper = styled.div`
-
+  .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+  }
 `;
 
 function App() {
@@ -26,7 +32,7 @@ function App() {
     });
   }, [])
   const errorMessage = hasError ? <p aria-label='loading'>Oops something went wrong...</p> : ''
-  const nonSuccess = loading ? <p aria-label='loading'>Loading...</p> : errorMessage
+  const nonSuccess = loading ? <div className='loader'><Loader type="BallTriangle" color="#e40000" height={50} width={50} /></div> : errorMessage
   console.log('airports: ', airports)
   return (
     <>
