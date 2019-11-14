@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   }
 `;
 
-function App() {
+function AppContainer() {
   const [airports, setAirports] = useState([])
   const [loading, setLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
@@ -57,4 +57,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppContainer;
