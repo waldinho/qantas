@@ -32,7 +32,7 @@ function App() {
     });
   }, [])
   const errorMessage = hasError ? <p aria-label='loading'>Oops something went wrong...</p> : ''
-  const nonSuccess = loading ? <div className='loader'><Loader type="BallTriangle" color="#e40000" height={50} width={50} /></div> : errorMessage
+  const nonSuccess = loading ? <div className='loader'><Loader type="Oval" color="#e40000" height={50} width={50} /></div> : errorMessage
   console.log('airports: ', airports)
   return (
     <>
