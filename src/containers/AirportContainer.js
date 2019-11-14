@@ -27,6 +27,7 @@ function App() {
   }, [])
   const errorMessage = hasError ? <p aria-label='loading'>Oops something went wrong...</p> : ''
   const nonSuccess = loading ? <p aria-label='loading'>Loading...</p> : errorMessage
+  console.log('airports: ', airports)
   return (
     <>
     <header className='App-header'>

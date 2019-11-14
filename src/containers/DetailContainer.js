@@ -8,7 +8,7 @@ const Wrapper = styled.div`
 `;
 
 const DetailContainer = ({content}) => {
-    console.log('Detail:', content)
+    console.log('Details: ', content)
     return(
         <>
             <Wrapper>
