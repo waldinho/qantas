@@ -41,7 +41,7 @@ function App() {
                 (<ListContainer {...props} content={airports}/>)
                 }/>
                 { airports.map((item, i)=>{
-                  const url = item.airportName.replace(/\s/g, '-');
+                  const url = item.airportName.replace(/\s/g, '-').toLowerCase()
                   return <Route key={i} path={`/${url}`} render={props => (<DetailContainer {...props} content={item}/>)}/>
                 })}
             </Switch>
