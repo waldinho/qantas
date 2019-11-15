@@ -29,12 +29,11 @@ function AppContainer() {
     })
     .catch(() => {
       setHasError(true)
-      console.log('Oops something went wrong...')
+      console.log('ERROR: Unsuccessful API call...')
     });
   }, [])
   const errorMessage = hasError ? <p aria-label='loading'>Oops something went wrong...</p> : ''
   const nonSuccess = loading ? <div className='loader'><Loader type="Oval" color="#e40000" height={50} width={50} /></div> : errorMessage
-  console.log('airports: ', airports)
   return (
     <>
     <header className='App-header'>

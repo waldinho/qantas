@@ -5,7 +5,10 @@ import { Link } from 'react-router-dom';
 const Wrapper = styled.div`
     display: flex;
     flext-direction: row;
-    padding: 0 0 0 1.875rem;
+    padding: 0 0 0 0.875rem;
+        @media screen and (min-width: 600px) {
+            padding: 0 0 0 1.875rem;
+        }
     justify-content: center;
     max-width: 56.5rem;
     margin: .875rem auto;
@@ -19,11 +22,13 @@ const Wrapper = styled.div`
             text-align: left;
             width: 70%;
             border-right: 1px solid #e5e5e5;
+            padding-right: 0.875rem;
         }
         &__right{
             justify-content: center;
             width: 30%;
             margin: auto;
+            padding: 0 0.35rem;
             .link {
                 color: #e40000;
                 text-decoration: none;

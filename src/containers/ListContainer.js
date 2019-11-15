@@ -7,7 +7,6 @@ const Wrapper = styled.div`
 `;
 
 const ListContainer = ({content}) => {
-    console.log('List: ', content)
     const [results, setResults] = useState(50)
     return(
         <>
