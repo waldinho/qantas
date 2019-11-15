@@ -35,11 +35,8 @@ const AppContainer = () => {
   }, [])
   const errorMessage = hasError ? <p aria-label='loading'>Oops something went wrong...</p> : ''
   const nonSuccess = loading ? <div className='loader'><Loader type="Oval" color="#e40000" height={50} width={50} /></div> : errorMessage
-
   return (
     <>
-    <header className='App-header'>
-    </header>
     <Wrapper>
         {
         loading ? nonSuccess
@@ -49,7 +46,7 @@ const AppContainer = () => {
                 (<ListContainer {...props} content={airports}/>)
                 }/>
                 { airports.map((item, i)=>{
-                  const url = item.airportName.replace(/\s/g, '-').toLowerCase()
+                  const url = item.airportName.replace(/\s/g, '-').replace(/[()]/g, '').toLowerCase()
                   return <Route key={i} path={`/${url}`} render={props => (<DetailContainer {...props} content={item}/>)}/>
                 })}
             </Switch>

@@ -48,7 +48,7 @@ const List = ({
     countryName,
     region,
 }) => {
-    const url = airportName.replace(/\s/g, '-').toLowerCase()
+    const url = airportName.replace(/\s/g, '-').replace(/[()]/g, '').toLowerCase()
     return(
         <Wrapper key={airportName}>
             <div className='content__left'>

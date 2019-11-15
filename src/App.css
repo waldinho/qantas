@@ -9,7 +9,9 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  background: #fff;
+  box-shadow: 0 0.125rem 0.125rem 0 rgba(0,0,0,0.1);
+  color: #323232;
 }
 
 .App-link {
@@ -29,4 +31,21 @@ button {
   color: #e40000;
   border: 2px solid #e40000;
   margin: 1rem 0 1.5rem 0;
+}
+
+button:hover {
+  background: #e40000;
+  color: #fff;
+}
+
+input {
+  border: 2px solid #dadada;
+  box-sizing: border-box;
+  color: #323232;
+  font-size: 18px;
+  height: 48px;
+  line-height: 25.5px;
+  padding: 10.5px 35px 12px 14px;
+  margin: 20px 0 5px 0;
+  font-family: 'Abel', Arial, Verdana, sans-serif;
 }

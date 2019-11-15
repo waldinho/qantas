@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from 'styled-components';
 
 import Detail from '../components/Detail'
@@ -8,7 +8,9 @@ const Wrapper = styled.div`
 `;
 
 const DetailContainer = ({content}) => {
-    console.log('Details :', content)
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return(
         <>
             <Wrapper>

@@ -3,8 +3,12 @@ import styled from 'styled-components';
 import {Map, GoogleApiWrapper} from 'google-maps-react'
 
 const Wrapper = styled.div`
-
+    height: '420px',
 `;
+
+// const mapOptions = {
+//     styles: mapStyles
+// };
 
 class AirportMap extends Component {
     render() {
@@ -13,19 +17,19 @@ class AirportMap extends Component {
             lat,
             long,
         } = this.props
-        console.log(lat, long)
         return (
             <Wrapper>
                 <Map 
                     google={google}
                     zoom={8}
+                    // options={mapOptions}
                     initialCenter={{
                         lat: lat,
                         lng: long
                     }}
                     style={{
                         margin: '1.75rem 0 0 0',
-                        height: '420px',
+                        // height: '420px',
                     }}>
                 </Map>
             </Wrapper>

@@ -5,19 +5,28 @@ import SearchResults from 'react-filter-search';
 import List from '../components/List'
 
 const Wrapper = styled.div`
-
 `;
 
 const ListContainer = ({content}) => {
     const [resultLimit, setResults] = useState(50)
-    const [value, setValue] = useState('')
+    const [value, setValue] = useState(
+        localStorage.getItem('searchValue') || ''
+    );
+    useEffect(() => {
+        localStorage.setItem('searchValue', value);
+    }, [value]);
     const handleChange = event => {
-        const { value } = event.target;
-        setValue( value );
+        const {value} = event.target;
+        setValue(value);
     }
+    window.onscroll = (ev) => {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            setResults(resultLimit + 50)
+        }
+    };
     return(
         <>
-            <input type="text" value={value} onChange={handleChange} />
+            <input type="text" value={value} onChange={handleChange} placeholder='Search airports...'/>
             <SearchResults
                 value={value}
                 data={content}
@@ -41,9 +50,9 @@ const ListContainer = ({content}) => {
                     </Wrapper>
                 )}
             />
-            <button onClick={() => setResults(resultLimit + 50)}>Load more</button>
+        }
         </>
-    );
+    )
 }
 
 export default ListContainer;
