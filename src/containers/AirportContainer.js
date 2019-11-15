@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
 import Loader from 'react-loader-spinner'
+
 import ListContainer from '../containers/ListContainer';
 import DetailContainer from '../containers/DetailContainer';
 import { getAirports } from '../api/getAirports';
@@ -17,7 +18,7 @@ const Wrapper = styled.div`
     }
 `;
 
-function AppContainer() {
+const AppContainer = () => {
   const [airports, setAirports] = useState([])
   const [loading, setLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
@@ -34,6 +35,7 @@ function AppContainer() {
   }, [])
   const errorMessage = hasError ? <p aria-label='loading'>Oops something went wrong...</p> : ''
   const nonSuccess = loading ? <div className='loader'><Loader type="Oval" color="#e40000" height={50} width={50} /></div> : errorMessage
+
   return (
     <>
     <header className='App-header'>

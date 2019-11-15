@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
-import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react'
+import {Map, GoogleApiWrapper} from 'google-maps-react'
 
 const Wrapper = styled.div`
 
