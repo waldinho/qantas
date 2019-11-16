@@ -6,7 +6,6 @@ import Detail from '../components/Detail'
 const Wrapper = styled.div`
     position: relative;
     top: 11vh;
-    z-index: -99999;
 `;
 
 const DetailContainer = ({content}) => {
