@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`<Header /> with no props should match the snapshot 1`] = `"<div class=\\"sc-bdVaJa cBvsrr\\"><header class=\\"App-header\\"><img src=\\"https://www.qantas.com/content/dam/qantas/centenary/QANTAS-Centenary-40px.png\\" alt=\\"Qantas\\" title=\\"Qantas\\"/></header></div>"`;

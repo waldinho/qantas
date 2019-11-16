@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`<ListContainer /> with props should match the snapshot 1`] = `"<div class=\\"search\\"><input type=\\"text\\" value=\\"\\" placeholder=\\"Search airports...\\"/></div><div class=\\"sc-bwzfXH iIizFV\\"><div class=\\"sc-bdVaJa lgVskm\\"><div class=\\"content__left\\"><div><h3 aria-label=\\"Anaa\\">AAA - Anaa</h3><p aria-label=\\"Anaa\\">Anaa, French Polynesia, South Pacific</p></div></div><div class=\\"content__right\\"><div><p aria-label=\\"View Details\\"><a class=\\"link\\" href=\\"/anaa\\">View Details</a></p></div></div></div></div>"`;
