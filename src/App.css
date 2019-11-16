@@ -18,7 +18,7 @@
   color: #323232;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: -webkit-fill-available;
   z-index: 2;
 }
 
@@ -56,7 +56,7 @@ input {
 .search {
   position: fixed;
   top: 10vh;
-  width: 100%;
+  width: -webkit-fill-available;
   background: #323232;
   padding: 1vh;
   z-index: 1;
