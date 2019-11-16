@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { shallow } from 'enzyme';
+
 import App from '../App';
 import ListContainer from '../containers/ListContainer';
 import DetailContainer from '../containers/DetailContainer';
@@ -12,7 +13,7 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-const dummyArray = [
+const dummyContent = [
   {
     airportCode:"AAA",
     internationalAirport:false,
@@ -50,7 +51,7 @@ describe('<ListContainer /> with props', () => {
   const container = shallow(
     <Router>
       <ListContainer 
-      content={dummyArray} />
+      content={dummyContent} />
     </Router>
   );
   it('should match the snapshot', () => {
@@ -62,7 +63,7 @@ describe('<DetailContainer /> with props', () => {
   const container = shallow(
     <Router>
       <DetailContainer 
-      content={dummyArray} />
+      content={dummyContent} />
     </Router>
   );
   it('should match the snapshot', () => {
