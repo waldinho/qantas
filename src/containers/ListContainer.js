@@ -13,13 +13,13 @@ const ListContainer = ({content}) => {
     const [resultLimit, setResults] = useState(50)
     const [value, setValue] = useState(
         localStorage.getItem('searchValue') || ''
-    );
+    )
     useEffect(() => {
-        localStorage.setItem('searchValue', value);
+        localStorage.setItem('searchValue', value)
     }, [value]);
     const handleChange = event => {
-        const {value} = event.target;
-        setValue(value);
+        const {value} = event.target
+        setValue(value)
     }
     window.onscroll = (ev) => {
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {

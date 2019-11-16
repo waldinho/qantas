@@ -20,8 +20,8 @@ const Wrapper = styled.div`
 
 const AppContainer = () => {
   const [airports, setAirports] = useState([])
-  const [loading, setLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
+  const [loading, setLoading] = useState(true)
+  const [hasError, setHasError] = useState(false)
   useEffect(() => {
     getAirports().then(res => res.json())
     .then((data) => {
@@ -31,7 +31,7 @@ const AppContainer = () => {
     .catch(() => {
       setHasError(true)
       console.log('ERROR: Unsuccessful API call...')
-    });
+    })
   }, [])
   const errorMessage = hasError ? <p aria-label='loading'>Oops something went wrong...</p> : ''
   const nonSuccess = loading ? <div className='loader'><Loader type="Oval" color="#e40000" height={50} width={50} /></div> : errorMessage
