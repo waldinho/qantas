@@ -9,7 +9,6 @@ const Wrapper = styled.div`
 `;
 
 const DetailContainer = ({content}) => {
-    console.log(content)
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
