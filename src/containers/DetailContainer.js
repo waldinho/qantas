@@ -27,8 +27,6 @@ const DetailContainer = ({content}) => {
                     countryCode={content.country.countryCode}
                     location={content.location}
                     region={content.region}
-                    international={content.internationalAirport}
-                    domestic={content.domesticAirport}
                     etickets={content.eticketableAirport}
                 />
             </Wrapper> 
