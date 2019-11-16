@@ -5,6 +5,8 @@ import SearchResults from 'react-filter-search';
 import List from '../components/List'
 
 const Wrapper = styled.div`
+    position: relative;
+    top: 18.5vh;
 `;
 
 const ListContainer = ({content}) => {
@@ -26,7 +28,9 @@ const ListContainer = ({content}) => {
     };
     return(
         <>
-            <input type="text" value={value} onChange={handleChange} placeholder='Search airports...'/>
+            <div className='search'>
+                <input type="text" value={value} onChange={handleChange} placeholder='Search airports...'/>
+            </div>
             <SearchResults
                 value={value}
                 data={content}
@@ -50,7 +54,7 @@ const ListContainer = ({content}) => {
                     </Wrapper>
                 )}
             />
-        }
+        
         </>
     )
 }

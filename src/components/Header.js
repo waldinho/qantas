@@ -16,7 +16,7 @@ const Header = () => {
             <header className='App-header'>
                 <img src="https://www.qantas.com/content/dam/qantas/centenary/QANTAS-Centenary-40px.png" alt='Qantas' title='Qantas'/>
             </header>
-        </Wrapper>  
+        </Wrapper>
     );
 }
 

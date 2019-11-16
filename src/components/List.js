@@ -17,6 +17,7 @@ const Wrapper = styled.div`
     box-shadow: 0 0.125rem 0.125rem 0 rgba(0,0,0,0.1);
     background: #fff;
     .content {
+        
         &__left{
             justify-content: flex-start;
             text-align: left;
@@ -48,7 +49,7 @@ const List = ({
     countryName,
     region,
 }) => {
-    const url = airportName.replace(/\s/g, '-').replace(/[()]/g, '').toLowerCase()
+    const url = airportCode.replace(/\s/g, '-').replace(/[()]/g, '').toLowerCase()
     return(
         <Wrapper key={airportName}>
             <div className='content__left'>

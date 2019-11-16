@@ -5,7 +5,6 @@ import { shallow } from 'enzyme';
 
 import App from '../App';
 import ListContainer from '../containers/ListContainer';
-import DetailContainer from '../containers/DetailContainer';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -13,7 +12,7 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-const dummyContent = [
+const dummyObj = [
   {
     airportCode:"AAA",
     internationalAirport:false,
@@ -51,19 +50,7 @@ describe('<ListContainer /> with props', () => {
   const container = shallow(
     <Router>
       <ListContainer 
-      content={dummyContent} />
-    </Router>
-  );
-  it('should match the snapshot', () => {
-    expect(container.html()).toMatchSnapshot();
-  })
-})
-
-describe('<DetailContainer /> with props', () => {
-  const container = shallow(
-    <Router>
-      <DetailContainer 
-      content={dummyContent} />
+      content={dummyObj} />
     </Router>
   );
   it('should match the snapshot', () => {

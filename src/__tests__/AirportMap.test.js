@@ -15,3 +15,4 @@ describe('<AirportMap /> with no props', () => {
     expect(container.html()).toMatchSnapshot();
   })
 })
+

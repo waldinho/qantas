@@ -6,21 +6,19 @@ import styled from 'styled-components'
 
 import AirportContainer from "./containers/AirportContainer";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 
 const AppWrapper = styled.div`
   text-align: center;
 `
 const App = () => (
- <Router>
     <>
+    <Router>
       <AppWrapper>
         <Header />
         <AirportContainer />
-        <Footer />
       </AppWrapper>
+    </Router>
     </>
- </Router>
 );
 
 export default App;

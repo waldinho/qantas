@@ -1,6 +1,6 @@
 <h2>Qantas technical test - James Waller</h2>
 
-<!-- <h3>Note: I have refactored the AppContainer to be functional and use hooks, however setState and useEffect don't play too nice with enzhyme and jest so it's not really that testable. But, I have left it in the repo for you to have a look.</h3> -->
+<h3>Note: I don't think all the latitude and logitude co-ordinates are correct in the API, so some of the maps might not be totally accurate. Because of I decided agains adding a pin to the map to show the location as not all will be correct..</h3>
 
 To fire up run:
 
