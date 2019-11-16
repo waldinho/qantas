@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 const Wrapper = styled.div`
     display: flex;
@@ -59,7 +59,9 @@ const List = ({
             </div>
             <div className='content__right'>
                 <div key={airportName}>
-                    <p aria-label='View Details'><Link to={url} className='link'>View Details</Link></p>
+                    <p aria-label='View Details'>
+                        <Link to={url} className='link'>View Details</Link>
+                    </p>
                 </div>
             </div>
         </Wrapper>  

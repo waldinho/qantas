@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
 
 import Detail from '../components/Detail'
@@ -8,6 +8,9 @@ const Wrapper = styled.div`
 `;
 
 const DetailContainer = ({content}) => {
+    const [airport] = useState([content])
+    const [city] = useState([airport.city])
+    const [country] = useState([airport.country])
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
@@ -15,16 +18,16 @@ const DetailContainer = ({content}) => {
         <>
             <Wrapper>
                 <Detail 
-                    airportCode={content.airportCode}
-                    airportName={content.airportName}
-                    domestic={content.domesticAirport}
-                    international={content.internationalAirport}
-                    cityName={content.city.cityName}
-                    cityCode={content.city.cityCode}
-                    countryName={content.country.countryName}
-                    countryCode={content.country.countryCode}
-                    location={content.location}
-                    region={content.region}
+                    airportCode={airport.airportCode}
+                    airportName={airport.airportName}
+                    domestic={airport.domesticAirport}
+                    international={airport.internationalAirport}
+                    cityName={city.cityName}
+                    cityCode={city.cityCode}
+                    countryName={country.countryName}
+                    countryCode={country.countryCode}
+                    location={airport.location}
+                    region={airport.region}
                 />
             </Wrapper> 
         </>

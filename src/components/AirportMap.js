@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import {Map, GoogleApiWrapper} from 'google-maps-react'
 
 const Wrapper = styled.div`
-    height: '420px',
 `;
 
 // const mapOptions = {

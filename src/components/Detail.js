@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import AirportMap from './AirportMap'
 import { Link } from 'react-router-dom';
@@ -44,20 +44,20 @@ const Detail = ({
     region,
     location,
 }) => {
-    const latitude = location.latitude
-    const longitude = location.longitude
+    const [locationObj] = useState([location])
+    const [regionObj] = useState([region])
     return(
         <Wrapper key={airportName}>
             <div className='main'>
                 <div key={airportName}>
                     <h2 aria-label={airportName}>{airportCode} - {airportName}</h2>
-                    <p aria-label={cityName}>{cityName}, {countryName}, {region.regionName}</p>
+                    <p aria-label={cityName}>{cityName}, {countryName}, {regionObj.regionName}</p>
                 </div>
                 <p aria-label='View Details'><Link to='/' className='link'>>Back</Link></p>
             </div>
             <AirportMap
-                lat={latitude}
-                long={longitude}
+                lat={locationObj.latitude}
+                long={locationObj.longitude}
             />
         </Wrapper>  
     );
